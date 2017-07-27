@@ -86,6 +86,17 @@
 - ClientId: Public token - we can share this with the public
 - ClienSecret: Private token - we don't want anyone to see this!
 
+-----
+
+## Server
+- Index.js: Helper modules and business logic
+  - Config: Protected API keys and settings
+  - Routes: All route handlers, grouped by purpose
+  - Services: helper modules and business logic
+
+------
+
+
 
 - Command instructions of building the app:
   - Server:
