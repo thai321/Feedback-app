@@ -1,6 +1,5 @@
 # Application
 
-## App Overview
 
 - **Order**:
   - Someone uses start up owner's app/service
@@ -53,8 +52,47 @@
   - Commit code base with git
   - Deploy App with Git
 
+- OAuth Flow
+  - Client:
+    - User clicks 'Login'
+    > Direct to localhost: 5000/auth/google --> Server
+  - Server:
+    - Forward users's request to Google
+    > google.com/auth?appId=123
+  - Google:
+    - Ask user if they grant permission
+    - User grants permission
+    > Direct to localhost:5000/auth/google/callback?code=456
+  - Server:
+    - Put user on hold, take the 'code' from the URL
+    - Send request to google with 'code' included
+  - Google:
+    - Google sees 'code' in URL, replies with details about this user
+    > response back to Server
+  - Server:
+    - Get user details, create new record in database
+    - Set user ID in cookie for this user
+    > Kick user back to localhost:5000 to Client
+  - Client:
+    - Logged in!
+    - I need some resources from the API
+    > Cookie automatically included, to Server
+  - Server: Ah, this request has a cookie with user id equal to 123
+
+- Passport Library Components:
+  - Passport: General helpers for handling auth in Express apps
+  - Passport strategy: Helpers for authenticating with one very specific method (email/password, Google, FaceBook, etc)
+
+- ClientId: Public token - we can share this with the public
+- ClienSecret: Private token - we don't want anyone to see this!
+
+
 - Command instructions of building the app:
   - Server:
     - npm init
     - npm install --save express
     - To run: node index.js
+    - npm install --save passport passport-google-oauth20
+    - npm install --save nodemon
+      - Add: `"dev": "nodemon index.js"` under "scripts" to **package.json**
+      - run: `npm run dev`
