@@ -79,6 +79,7 @@
     > Cookie automatically included, to Server
   - Server: Ah, this request has a cookie with user id equal to 123
 
+
 - Passport Library Components:
   - Passport: General helpers for handling auth in Express apps
   - Passport strategy: Helpers for authenticating with one very specific method (email/password, Google, FaceBook, etc)
@@ -96,6 +97,10 @@
 
 ------
 
+- Mongoose: a Model Class which allow to create a collection of users in MongoDB
+
+-----
+
 
 
 - Command instructions of building the app:
@@ -107,3 +112,4 @@
     - npm install --save nodemon
       - Add: `"dev": "nodemon index.js"` under "scripts" to **package.json**
       - run: `npm run dev`
+    - npm install --save mongoose
