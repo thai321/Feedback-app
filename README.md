@@ -206,7 +206,28 @@ fetchAlbums();
           - ...
       - Surveynew
         - SurveyField
+
+- React Component: Calls a ... Action Creator
+- Action Creator: Returns a ... Action
+- Action: Sent to .... reducers
+- Reducers: updates state in ... Store
+- Store: State sent back to React Components, causing them to rerender
+
+- Provider: is a component that makes the store accessible to every component in the app
+- Provider: store
+  - App
+    - Dashboard
+      - SurveyList
+        - SurveyListltem: SurveyList can access the store thanks to the Provider tag
+          - Provider
+
+- Redux Store: All of the state exist
+  - Combine Reducers
+    - authReducer: Records whether or not the user is logged in
+    - surveysReducer: Records a list of all surveys user has created
+
 ---------
+
 
 
 - Command instructions of building the app:
