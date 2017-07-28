@@ -101,6 +101,16 @@
 
 -----
 
+## Cookie flow order
+
+- Request: either comes in or sent to route handler
+- Cookie-Session: Extracts cookie data
+- Passport: Pulls user id out of cookie data
+- deserialize User: Function we write tot turn user id into a user
+- User model instance added to req object as 'req.user'
+
+----
+
 
 
 - Command instructions of building the app:
