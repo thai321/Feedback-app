@@ -245,3 +245,4 @@ fetchAlbums();
   - Client:
     - create-react-app client
     - npm install --save redux react-redux react-router-dom
+    - npm install --save materialize-css
