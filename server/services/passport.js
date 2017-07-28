@@ -7,7 +7,7 @@ const keys = require('../config/keys');
 const User = mongoose.model('users');
 
 // Call serializeuser with the user to generate the identifying piece of info
-// To turn into a cookie
+// To turn into a cookie.
 passport.serializeUser((user, done) => {
   done(null, user.id); // user.id is the id given in the MongoDB
 });
@@ -25,7 +25,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback'
+      callbackURL: '/auth/google/callback',
+      proxy: true // just trust the server proxy (Heroku in this case)
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({ googleId: profile.id }).then(existingUser => {
