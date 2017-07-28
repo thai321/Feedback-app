@@ -27,6 +27,19 @@
   - User can see report of all survey responses
     - Mongo + React + Redux
 
+--------
+## App Diagrams
+- Front End: Client setup, Auth on client, Add survey stuff on client
+- Back End: Server setup, Authentication flow, Add survey API's on server
+- Order:
+  - Server setup
+  - Authentication flow
+  - Client setup
+  - Auth on client
+  - Add survey API's on server
+  - Add survey stuff on client
+-------
+
 - Node:
   - Javascript runtime used to execute code outside of the browser
 - Express:
@@ -179,7 +192,22 @@ const fetchAlbums = async () => {
 fetchAlbums();
 ```
 
+--------
+### Client Side
+- index.js: Data layer control (Redux)
+- App.js: Rendering layer control (React Router)
+- Order:
+  - index
+    - App
+      - landing
+      - Header
+      - Dashboard
+        - SurveyList
+          - ...
+      - Surveynew
+        - SurveyField
 ---------
+
 
 - Command instructions of building the app:
   - Server:
@@ -195,3 +223,4 @@ fetchAlbums();
     - npm install --save concurrently
   - Client:
     - create-react-app client
+    - npm install --save redux react-redux react-router-dom
