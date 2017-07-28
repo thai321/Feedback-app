@@ -121,6 +121,19 @@
 - React Server(js stuff): Button.js, App.js, Header.js
 - Express Server(json stuff): MongoDB
 
+- Use : npm install --save concurrently
+- modified the package.json's scripts:
+```js
+{
+  scripts":{
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
+- Run: npm run dev
+```
 ------
 
 
@@ -135,5 +148,6 @@
       - run: `npm run dev`
     - npm install --save mongoose
     - npm install --save cookie-session
+    - npm install --save concurrently
   - Client:
     - create-react-app client
