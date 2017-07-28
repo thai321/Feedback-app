@@ -113,3 +113,4 @@
       - Add: `"dev": "nodemon index.js"` under "scripts" to **package.json**
       - run: `npm run dev`
     - npm install --save mongoose
+    - npm install --save cookie-session
