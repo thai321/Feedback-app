@@ -116,6 +116,12 @@
 
 -----
 
+## 2 Servers
+- Make 2 Server to work together nicely
+- React Server(js stuff): Button.js, App.js, Header.js
+- Express Server(json stuff): MongoDB
+
+------
 
 
 - Command instructions of building the app:
@@ -129,3 +135,5 @@
       - run: `npm run dev`
     - npm install --save mongoose
     - npm install --save cookie-session
+  - Client:
+    - create-react-app client
