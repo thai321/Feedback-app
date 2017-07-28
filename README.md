@@ -113,7 +113,8 @@
 - Mongoose: a Model Class which allow to create a collection of users in MongoDB
 
 -----
-- Enumerable <a name="Enumerable"></a>
+ <a name="Enumerable"></a>
+- Enumerable
 ## Cookie flow order
 
 - Request: either comes in or sent to route handler
