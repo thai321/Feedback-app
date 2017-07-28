@@ -110,6 +110,11 @@
 - User model instance added to req object as 'req.user'
 
 ----
+## Keys (2 sets of Keys)
+- Dev (on my laptop): MongoDB, Google API, Cookie Key
+- Prod (on Heroku environment): MongoDB, Google API, Cookie Key
+
+-----
 
 
 

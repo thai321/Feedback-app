@@ -11,6 +11,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+// ###### MIDDLEWARE ####### START
 app.use(
   cookieSession({
     // How long it's going to exist before it can expires( convert to ms for 30 days)
@@ -21,7 +22,9 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+// ###### MIDDLEWARE ####### END
 
+// routes
 require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
